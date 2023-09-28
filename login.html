@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./logo.png" />
+    <meta name="description"
+        content="Software Club 2023 developed a WiFi credential portal to commemorate DeerUtsab 2023.">
+    <title>Deer Utsab 8.0</title>
+
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter&family=Merriweather:ital,wght@1,700&family=Poppins:wght@300;500&display=swap');
+
+        :root {
+            font-family: Poppins, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+            --primary: #C1a136;
+            --secondary: #000000;
+            --tertiary: #fffbee;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: var(--secondary);
+            color: var(--tertiary);
+        }
+
+        .header__container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .deerUtsav {
+            width: 220px;
+            height: 100%;
+        }
+
+        .counter__container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            letter-spacing: 2px;
+            margin-top: -25px;
+        }
+
+        .timing__container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            font-size: large;
+        }
+
+        .timing__box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 10px;
+        }
+
+        .timing__box__number {
+            font-size: xx-large;
+            font-weight: bold;
+        }
+
+        .timing__box__text {
+            font-size: small;
+            font-weight: bold;
+        }
+
+        .login__container {
+            background-color: var(--secondary);
+            border-radius: 5px;
+            padding: 2rem;
+            box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.15);
+            transition: all 0.1s ease-in-out;
+            display: block;
+            margin: 0 auto;
+            width: 400px;
+            letter-spacing: 2px;
+            margin-top: -10px;
+        }
+
+
+        .login__container form input {
+            background-color: var(--secondary);
+            color: var(--tertiary);
+            display: block;
+            padding: 13px;
+            border-radius: 5px;
+            outline: none;
+            font-size: 18px;
+            letter-spacing: 1.5px;
+            font-weight: bold;
+            width: 100%;
+            margin-bottom: 1rem;
+            border: 1px solid var(--tertiary);
+            transition: all 0.1s ease-in-out;
+        }
+
+        .login__container form input:focus {
+            box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.15);
+            transform: scale(1.02);
+        }
+
+        .login__container form button {
+            background-color: var(--primary);
+            color: var(--tertiary);
+            display: block;
+            padding: 13px;
+            border-radius: 5px;
+            outline: none;
+            font-size: 18px;
+            letter-spacing: 1.5px;
+            font-weight: bold;
+            width: 100%;
+            cursor: pointer;
+            margin-bottom: 2rem;
+            transition: all 0.1s ease-in-out;
+        }
+
+        .login__container form button:hover {
+            box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.15);
+            transform: scale(1.02);
+        }
+
+        .label {
+            color: var(--tertiary);
+            margin-bottom: 10px;
+            display: block;
+            text-align: left;
+        }
+
+        .button {
+            background-color: var(--primary);
+            color: var(--tertiary);
+            display: block;
+            padding: 13px;
+            border-radius: 5px;
+            outline: none;
+            font-size: 18px;
+            letter-spacing: 1.5px;
+            font-weight: bold;
+            width: 100%;
+            cursor: pointer;
+            margin-bottom: 2rem;
+            transition: all 0.1s ease-in-out;
+            height: 50px;
+            text-align: center;
+        }
+
+        .button:hover {
+            box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.15);
+            transform: scale(1.02);
+        }
+
+        .credit {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: -50px;
+        }
+
+        .credit-content {
+            display: flex;
+            align-items: center;
+        }
+
+        .club__logo {
+            height: 100px;
+        }
+        
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        main {
+            text-align: center;
+        }
+
+        .content__container {
+            max-width: 100%;
+            width: 400px; /* Adjust this width as needed for your design */
+        }
+
+        /* Add media queries for responsiveness */
+        @media (max-width: 768px) {
+            .content__container {
+                width: 80%; /* Adjust this width for smaller screens */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class='header__container'>
+            <div class='header__content'>
+                <img class="deerUtsav" src="./logo.png" alt="">
+            </div>
+        </div>
+        <section>
+            <div class="counter__container">
+                <div class="timing__container">
+                    <div class="timing__box">
+                        <div class="timing__box__number" style="color: var(--primary)">00:</div>
+                        <div class="timing__box__text" style="color: var(--primary)">Days:</div>
+                    </div>
+                    <div class="timing__box">
+                        <div class="timing__box__number" style="color: var(--tertiary)">00:</div>
+                        <div class="timing__box__text" style="color: var(--tertiary)">Hours:</div>
+                    </div>
+                    <div class="timing__box">
+                        <div class="timing__box__number" style="color: var(--tertiary)">00:</div>
+                        <div class="timing__box__text" style="color: var(--tertiary)">Minutes:</div>
+                    </div>
+                    <div class="timing__box">
+                        <div class="timing__box__number" style="color: var(--tertiary)">00</div>
+                        <div class="timing__box__text" style="color: var(--tertiary)">Seconds</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="content__container">
+                <div class="login__container">
+                    <form>
+                        <div class="input__container">
+                            <label class='label' htmlFor="username">Username</label>
+                            <input class='input__info' type="text" id="username" placeholder="username">
+                        </div>
+                        <div class="input__container">
+                            <label class='label' htmlFor="password">Password</label>
+                            <input type="password" id="password" placeholder="password" />
+                        </div>
+                        <button type="submit">Log In</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="credit">
+            <div class="credit-content">
+                <img src="./software club.png" class="club__logo" alt="SOFTWARE CLUB LOGO" />
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+
+
+
+
+<script>
+    console.log("Developed By Bijay Shrestha (ZEROx0817), DWIT Software Club Member 2023");
+    const targetDate = new Date("2023-10-12T15:00:00").getTime();
+
+    const updateCountdown = () => {
+        const now = new Date().getTime();
+        const timeRemaining = targetDate - now;
+
+        if (timeRemaining <= 0) {
+            clearInterval(interval);
+            document.querySelector('.counter__container').textContent = 'Event Started';
+        } else {
+            const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+            document.querySelector('.timing__box__number').textContent = addLeadingZero(days) + ':';
+            document.querySelector('.timing__box__text').textContent = 'Days:';
+
+            document.querySelector('.timing__box:nth-child(2) .timing__box__number').textContent = addLeadingZero(hours) + ':';
+            document.querySelector('.timing__box:nth-child(2) .timing__box__text').textContent = 'Hours:';
+
+            document.querySelector('.timing__box:nth-child(3) .timing__box__number').textContent = addLeadingZero(minutes) + ':';
+            document.querySelector('.timing__box:nth-child(3) .timing__box__text').textContent = 'Minutes:';
+
+            document.querySelector('.timing__box:nth-child(4) .timing__box__number').textContent = addLeadingZero(seconds);
+            document.querySelector('.timing__box:nth-child(4) .timing__box__text').textContent = 'Seconds';
+        }
+    };
+
+    const interval = setInterval(updateCountdown, 1000);
+    updateCountdown();
+
+    function addLeadingZero(number) {
+        return number < 10 ? `0${number}` : number;
+    }
+</script>
+
+</html>
