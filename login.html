@@ -8,15 +8,12 @@
     <meta name="description"
         content="Software Club 2023 developed a WiFi credential portal to commemorate DeerUtsab 2023.">
     <title>Deer Utsab 8.0</title>
-
-
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter&family=Merriweather:ital,wght@1,700&family=Poppins:wght@300;500&display=swap');
 
         :root {
             font-family: Poppins, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-            --primary: #C1a136;
-            --secondary: #000000;
+            --primary: #c09c24;
             --tertiary: #fffbee;
         }
 
@@ -26,6 +23,13 @@
             box-sizing: border-box;
             background-color: var(--secondary);
             color: var(--tertiary);
+        }
+
+        body {
+            background-image: url(./image.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
         }
 
         .header__container {
@@ -39,6 +43,7 @@
         .deerUtsav {
             width: 220px;
             height: 100%;
+            margin-top: -25px;
         }
 
         .counter__container {
@@ -48,7 +53,7 @@
             justify-content: center;
             padding: 20px;
             letter-spacing: 2px;
-            margin-top: -25px;
+            margin-top: -50px;
         }
 
         .timing__container {
@@ -68,24 +73,26 @@
         .timing__box__number {
             font-size: xx-large;
             font-weight: bold;
+            color: var(--tertiary)
         }
 
         .timing__box__text {
             font-size: small;
             font-weight: bold;
+            color: var(--tertiary)
         }
 
         .login__container {
             background-color: var(--secondary);
             border-radius: 5px;
             padding: 2rem;
-            box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 0 50px 5px rgba(255, 255, 255, 0.15);
             transition: all 0.1s ease-in-out;
             display: block;
             margin: 0 auto;
             width: 400px;
             letter-spacing: 2px;
-            margin-top: -10px;
+            margin-top: -15px;
         }
 
 
@@ -165,7 +172,6 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            margin-top: -50px;
         }
 
         .credit-content {
@@ -176,7 +182,7 @@
         .club__logo {
             height: 100px;
         }
-        
+
         body {
             display: flex;
             flex-direction: column;
@@ -190,23 +196,13 @@
             text-align: center;
         }
 
-        .content__container {
-            max-width: 100%;
-            width: 400px; /* Adjust this width as needed for your design */
-        }
-
-        /* Add media queries for responsiveness */
-        @media (max-width: 768px) {
-            .content__container {
-                width: 80%; /* Adjust this width for smaller screens */
-            }
-        }
     </style>
 </head>
 
 <body>
     <main>
         <div class='header__container'>
+            <span>“Events End but Memories last forever”</span>
             <div class='header__content'>
                 <img class="deerUtsav" src="./logo.png" alt="">
             </div>
@@ -267,6 +263,7 @@
 
 <script>
     console.log("Developed By Bijay Shrestha (ZEROx0817), DWIT Software Club Member 2023");
+    console.log("Designed By Keshab Rachit Regmi");
     const targetDate = new Date("2023-10-12T15:00:00").getTime();
 
     const updateCountdown = () => {
