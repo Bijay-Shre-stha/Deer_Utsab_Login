@@ -26,7 +26,7 @@
         }
 
         body {
-            background-image: url(./image.png);
+            background-image: url(./Background.png);
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
@@ -51,9 +51,10 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            font-size: 45px;
             padding: 20px;
             letter-spacing: 2px;
-            margin-top: -50px;
+            margin-top: -35px;
         }
 
         .timing__container {
@@ -86,7 +87,7 @@
             background-color: var(--secondary);
             border-radius: 5px;
             padding: 2rem;
-            box-shadow: 0 0 50px 5px rgba(255, 255, 255, 0.15);
+            box-shadow: 0 0 50px 5px rgba(255, 234, 113, 0.5);
             transition: all 0.1s ease-in-out;
             display: block;
             margin: 0 auto;
@@ -181,6 +182,8 @@
 
         .club__logo {
             height: 100px;
+            margin-top: -8px;
+            margin-left: 25px;
         }
 
         body {
@@ -196,6 +199,47 @@
             text-align: center;
         }
 
+        @media screen and (max-width: 768px) {
+
+            body {
+                background-size: 200%; 
+                /* background-size: auto;  */
+
+            }
+
+            .header__container {
+                margin-top: 5px; 
+            }
+
+            .deerUtsav {
+                margin-top: 5px; 
+                width: 180px; 
+            }
+
+        }
+
+        @media screen and (max-width: 480px) {
+            body {
+                background-size: 400%; 
+                /* background-size: auto;  */
+
+            }
+
+            .header__container {
+                margin-top: 10px; 
+            }
+
+            .deerUtsav {
+                margin-top: -15px;
+                width: 140px; 
+            }
+
+            .login__container {
+                margin-top: -20px;
+                width: 90%; 
+            }
+
+        }
     </style>
 </head>
 
